@@ -8,6 +8,7 @@ enum class TokensMeanings {
 
 internal object TokenConst {
 
+
     private const val TEMPLATE_COMBINATION = "nn_n+_n-_n÷_n×"
     const val BASE_OPERANDS = "+-"
     const val SECONDARY_OPERANDS="÷×"
