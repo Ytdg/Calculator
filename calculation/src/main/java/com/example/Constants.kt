@@ -8,10 +8,9 @@ enum class TokensMeanings {
 
 internal object TokenConst {
 
-
     private const val TEMPLATE_COMBINATION = "nn_n+_n-_n÷_n×"
     const val BASE_OPERANDS = "+-"
-    const val SECONDARY_OPERANDS="÷×"
+    const val SECONDARY_OPERANDS = "÷×"
     val incorrectCombination = mutableSetOf<String>().apply {
         BASE_OPERANDS.forEach {
             TEMPLATE_COMBINATION.replace("n", it.toString()).split("_").forEach { combine ->
@@ -78,9 +77,10 @@ fun String.getOperandTokenMeanings(): TokensMeanings {
             TokensMeanings.Mult
         }
 
-        TokensMeanings.Percentage.getToken().define->{
+        TokensMeanings.Percentage.getToken().define -> {
             TokensMeanings.Percentage
         }
+
         else -> {
             TokensMeanings.Num
         }
